@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+.block1 {
+  display: block;
+  width: 80%;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 38px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block1:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+    .block2 {
+        display: block;
+        width: 30%;
+        border: none;
+        background-color:   #2636e8;
+        color: white;
+        padding: 14px 38px;
+        font-size: 26px;
+        cursor: pointer;
+        text-align: center;
+
+      }
+      
+      .block2:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      h1
+      {
+        font-size: 55px;
+        color:blue;
+        
+      }
+
+      h3
+      {
+        color:saddlebrown;
+        font-size: 30px;
+        display: inline-block;
+        height: 30px;
+        width:450px;
+        text-align: center;
+      
+    }
+
+      body
+      {
+          background-color: silver;
+      }
+
+</style>
+
+</head>
+
+
+
+<body>
+    <form action="{{url_for('predicting')}}" method="post">
+
+        <h1> SKODA </h1>
+        
+       <center> <h3>Thank You for Submitting your Request </h3></center>
+
+    <br><br>
+   <center> <b class='block1'> {{prediction_text}}</b></center>
+
+<br><br>
+
+    </form> 
+
+  <center><p style="color:red; font-size:20px" >Warning: Do not purchase the car if the person name is Shiny Thummanapalli and height is 5'0</p> </center>
+</div>
+    <hr>
+<marquee bgcolor='yellow'><font face ='impact' size="4" color ='red'>  Do not Purchase if the Mileage is below 10 Miles/Gallon</font></marquee><hr>
+
+
+</body>
+</html>

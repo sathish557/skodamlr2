@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sathish</title>
+
+
+
+<style>
+    body
+    {
+        background-color:silver;
+       /* background-image: url('C:/Users/sathish/Pictures/2011-05/IMG_0983.JPG'); */
+       
+    }
+    .firstclass
+    {
+        color:saddlebrown;
+        font-size: 20px;
+        display: inline-block;
+        height: 30px;
+        width:250px;
+      
+    }
+
+    .secondclass
+    {
+        color:saddlebrown;
+        font-size: 25px;
+        display: inline-block;
+        height: 30px;
+        width:750px;
+    }
+
+
+
+    h2
+    {
+        color:blue;
+        font-size: 50px;
+        font-family: 'Times New Roman', Times, serif;
+    
+    }
+
+    .block1 {
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  margin-left: 70px;
+  margin-top: 40px;
+}
+
+.block1:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.block2 {
+  display: block;
+  width: 30%;
+  border: none;
+  background-color: #2636e8;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block2:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* 
+to appaar image and h1 side by side, create a div tag with class same_line and write the code below
+*/
+
+.same_line img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+.same_line h2 {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+
+</style>
+    
+</head>
+
+<body>
+
+
+<div class ='login'>
+
+<!-- you need to create static folder and place image in it -->
+  <!--  
+          <div class='same_line'><img src="{{url_for('static', filename='skoda_logo.jpg')}}" width="300"  height="130"/> 
+    <h2 align='center'  > Welcome to the world of Predictive Analytics </h2></div>
+    <br>
+        <img src="{{url_for('static', filename='skoda.jpg')}}" width="250"  height="400" align='right'/>
+     -->  
+
+    <h2 align='center' class='sameline' > Welcome to SKODA  </h2>
+ 
+    <h3 class='secondclass' ><b>Please fill the following details for the Car's Predicted Miles/Gallon</b></h3>
+   
+
+    <form action="{{url_for('predicting')}}" method="post">
+    
+    <ol>
+
+    <li><div class='firstclass'>Horse Power: </div>    <input type='number' name='HP' size='10'
+         placeholder='Horse Power' required='required' min='0' max='1000'    step = any     /><br><br> </li>
+    <li><div class='firstclass'>Cubic Feet of Cab Space:  </div>    <input type='number' name='VOL' size='10' 
+         placeholder='Cab Space' required='required' step = any min='0' max='300' /><br><br></li>
+    <li><div class='firstclass'>TOP Speed (in MPH): </div>  <input type='number' name='SP' size='10' 
+        placeholder='Top Speed' required='required' step = any min='0' max='300' /><br><br></li>
+    <li> <div class='firstclass'>Vehicle Weight (in KG)</div>  <input type='number' name='WT' size='10'  
+        placeholder='Vehicle Weight' required='required' step = any min='500' max='5000' /><br></li>
+    
+    </ol>
+
+ 
+
+    <button type='submit' class ='block1'>Predict Miles/Gallon of the Car</button>   
+  
+
+    <br><br>
+
+</div>
+    <hr>
+<marquee bgcolor='yellow'><font face ='impact' size="4" color ='red'>  Do not Purchase if the Mileage is below 10 Miles/Gallon</font></marquee><hr>
+</body>
+</html>
